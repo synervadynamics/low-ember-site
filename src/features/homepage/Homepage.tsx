@@ -1,8 +1,10 @@
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { BarSection } from "@/features/homepage/sections/BarSection";
 import { DiningCardsSection } from "@/features/homepage/sections/DiningCardsSection";
 import { FeatureStrip } from "@/features/homepage/sections/FeatureStrip";
 import { HeroSection } from "@/features/homepage/sections/HeroSection";
+import { KitchenSection } from "@/features/homepage/sections/KitchenSection";
 
 export function Homepage() {
   return (
@@ -18,6 +20,8 @@ export function Homepage() {
         <HeroSection />
         <FeatureStrip />
         <DiningCardsSection />
+        <KitchenSection />
+        <BarSection />
       </main>
       <SiteFooter />
     </div>
