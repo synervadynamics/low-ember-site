@@ -20,11 +20,11 @@ export function LinkArrow({
       href={href}
       aria-label={ariaLabel}
       className={cn(
-        "inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-brass-soft)] transition-colors duration-200 hover:text-[var(--color-text-soft)]",
+        "inline-flex min-h-11 w-fit items-center gap-2 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--color-brass-soft)] transition-colors duration-200 hover:text-[var(--color-text-soft)] active:text-[var(--color-text-soft)] sm:text-xs",
         className,
       )}
     >
-      <span>{children}</span>
+      <span className="text-left">{children}</span>
       <svg
         viewBox="0 0 24 24"
         aria-hidden="true"

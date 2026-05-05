@@ -20,7 +20,7 @@ export function EventCard({
   return (
     <article
       className={cn(
-        "panel panel-border flex h-full flex-col overflow-hidden transition-colors duration-200 hover:border-[color:var(--color-border-strong)]",
+        "panel panel-border flex h-full flex-col overflow-hidden transition-colors duration-200 hover:border-[color:var(--color-border-strong)] active:border-[color:var(--color-border-strong)]",
         className,
       )}
     >

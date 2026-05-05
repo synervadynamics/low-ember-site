@@ -20,12 +20,12 @@ export function MenuHighlight({
         className,
       )}
     >
-      <div className="flex items-start justify-between gap-4">
-        <h3 className="font-serif text-lg text-[var(--color-text-soft)]">
+      <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+        <h3 className="font-serif text-lg leading-tight text-[var(--color-text-soft)]">
           {name}
         </h3>
         {price ? (
-          <p className="shrink-0 text-sm text-[var(--color-brass-soft)]">
+          <p className="shrink-0 text-sm text-[var(--color-brass-soft)] sm:pt-0.5">
             {price}
           </p>
         ) : null}
