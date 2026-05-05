@@ -1,5 +1,7 @@
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { DiningCardsSection } from "@/features/homepage/sections/DiningCardsSection";
+import { FeatureStrip } from "@/features/homepage/sections/FeatureStrip";
 import { HeroSection } from "@/features/homepage/sections/HeroSection";
 
 export function Homepage() {
@@ -14,7 +16,8 @@ export function Homepage() {
       <SiteHeader />
       <main id="main-content" className="flex-1">
         <HeroSection />
-        {/* Future homepage sections render here in later steps. */}
+        <FeatureStrip />
+        <DiningCardsSection />
       </main>
       <SiteFooter />
     </div>

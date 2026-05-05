@@ -7,6 +7,7 @@ type SectionHeaderProps = {
   description?: string;
   align?: "left" | "center";
   className?: string;
+  titleId?: string;
 };
 
 export function SectionHeader({
@@ -15,6 +16,7 @@ export function SectionHeader({
   description,
   align = "left",
   className,
+  titleId,
 }: SectionHeaderProps) {
   const isCentered = align === "center";
 
@@ -31,7 +33,10 @@ export function SectionHeader({
           {eyebrow}
         </Eyebrow>
       ) : null}
-      <h2 className="text-balance font-serif text-3xl leading-tight text-[var(--color-text-soft)] sm:text-4xl lg:text-5xl">
+      <h2
+        id={titleId}
+        className="text-balance font-serif text-3xl leading-tight text-[var(--color-text-soft)] sm:text-4xl lg:text-5xl"
+      >
         {title}
       </h2>
       {description ? (
