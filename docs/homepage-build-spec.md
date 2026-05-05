@@ -6,6 +6,11 @@ Low Ember is a fictional premium neighbourhood restaurant and cocktail bar creat
 
 The homepage should feel dark, warm, intimate, polished, grounded, editorial, premium but not precious, and useful for real guests.
 
+Reference mockup:
+`docs/reference/visual/low-ember-homepage-mockup.png`
+Supporting notes:
+`docs/reference/visual/homepage-mockup-notes.md`
+
 ## Core Principle
 
 A restaurant website is a service interface wearing good clothes. It must help guests quickly understand the restaurant, view menus, reserve a table, check hours, find the location, and inquire about private dining.
