@@ -1,28 +1,107 @@
+@import "../styles/tokens.css";
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
+  --color-bg: var(--color-bg);
+  --color-bg-soft: var(--color-bg-soft);
+  --color-surface: var(--color-surface);
+  --color-surface-soft: var(--color-surface-soft);
+  --color-surface-warm: var(--color-surface-warm);
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+  --color-text: var(--color-text);
+  --color-text-soft: var(--color-text-soft);
+  --color-muted: var(--color-muted);
+  --color-muted-strong: var(--color-muted-strong);
+  --color-brass: var(--color-brass);
+  --color-brass-soft: var(--color-brass-soft);
+  --color-ember: var(--color-ember);
+  --color-ember-hover: var(--color-ember-hover);
+  --color-rust: var(--color-rust);
+  --shadow-soft: var(--shadow-soft);
+  --shadow-panel: var(--shadow-panel);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --container-max: var(--container-max);
+  --header-height: var(--header-height);
   --font-sans:
-    "Helvetica Neue", Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+    var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono:
-    "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    var(--font-geist-mono), "SFMono-Regular", "SF Mono", Consolas,
+    "Liberation Mono", Menlo, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(166, 75, 43, 0.08), transparent 32%),
+    linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-bg) 100%);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: color-mix(in srgb, var(--color-brass) 70%, transparent);
+  text-underline-offset: 0.18em;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-brass) 38%, var(--color-ember) 62%);
+  color: var(--color-text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brass-soft);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--color-focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+@utility site-shell {
+  width: min(calc(100% - 2rem), var(--container-max));
+  margin-inline: auto;
+}
+
+@utility page-section {
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+@utility panel {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-surface-soft) 72%, black) 0%,
+    var(--color-surface) 100%
+  );
+  box-shadow: var(--shadow-soft);
+  border-radius: var(--radius-lg);
+}
+
+@utility panel-border {
+  border: 1px solid var(--color-border);
+}
+
+@utility text-balance {
+  text-wrap: balance;
 }
