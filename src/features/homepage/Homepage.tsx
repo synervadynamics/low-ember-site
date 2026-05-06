@@ -4,7 +4,9 @@ import { BarSection } from "@/features/homepage/sections/BarSection";
 import { DiningCardsSection } from "@/features/homepage/sections/DiningCardsSection";
 import { FeatureStrip } from "@/features/homepage/sections/FeatureStrip";
 import { HeroSection } from "@/features/homepage/sections/HeroSection";
+import { HappeningsSection } from "@/features/homepage/sections/HappeningsSection";
 import { KitchenSection } from "@/features/homepage/sections/KitchenSection";
+import { LocationSection } from "@/features/homepage/sections/LocationSection";
 import { PrivateDiningSection } from "@/features/homepage/sections/PrivateDiningSection";
 import { RoomSection } from "@/features/homepage/sections/RoomSection";
 
@@ -26,6 +28,8 @@ export function Homepage() {
         <BarSection />
         <RoomSection />
         <PrivateDiningSection />
+        <HappeningsSection />
+        <LocationSection />
       </main>
       <SiteFooter />
     </div>
