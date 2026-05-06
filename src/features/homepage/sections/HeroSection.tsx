@@ -24,7 +24,7 @@ export function HeroSection() {
               <div className="space-y-4 sm:space-y-5">
                 <h1
                   id="hero-heading"
-                  className="text-balance max-w-[11ch] font-serif text-[2.75rem] leading-[0.96] tracking-[-0.03em] text-[var(--color-text-soft)] sm:text-[3.6rem] lg:text-[4.5rem] xl:text-[5rem]"
+                  className="text-balance max-w-[12ch] font-serif text-[2.75rem] leading-[0.96] tracking-[-0.03em] text-[var(--color-text-soft)] sm:max-w-[12.5ch] sm:text-[3.6rem] lg:max-w-[12ch] lg:text-[4.35rem] xl:text-[4.85rem]"
                 >
                   {hero.title}
                 </h1>

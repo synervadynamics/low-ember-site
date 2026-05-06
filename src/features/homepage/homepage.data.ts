@@ -29,11 +29,11 @@ type EventItem = {
 
 export const homepageData = {
   hero: {
-    title: "A neighbourhood restaurant built on good ingredients and steady hands.",
+    title: "A downtown room for dinner and another round.",
     description:
-      "Seasonal cooking, a thoughtful bar, and a room that’s meant to be lived in.",
+      "Seasonal plates, balanced cocktails, and warm service from five until late.",
     secondaryDescription:
-      "We opened with a simple idea: if you start with better ingredients and treat them with care, you don’t have to do much else.",
+      "Dinner first, bar seats for walk-ins, and a private room that still feels like part of the house.",
     primaryCta: {
       label: siteConfig.reservation.label,
       href: siteConfig.reservation.href,
@@ -42,8 +42,8 @@ export const homepageData = {
       label: "View Menus",
       href: "#menus",
     },
-    location: `${siteConfig.location.city}, ${siteConfig.location.province}`,
-    meta: "Dinner, Cocktails, Private Events",
+    location: "Downtown St. Catharines",
+    meta: "Dinner, cocktails, private dining",
     image: {
       label: "Hero Interior",
       aspectRatio: "16 / 9",
@@ -51,23 +51,23 @@ export const homepageData = {
   },
   featureStrip: [
     {
-      title: "Dinner Service",
+      title: "Dinner service",
       description: "Nightly from 5pm",
       icon: "utensils",
     },
     {
-      title: "Cocktail Program",
-      description: "Crafted with intention",
+      title: "Cocktails & wine",
+      description: "Classics, house drinks, Niagara wine",
       icon: "martini",
     },
     {
-      title: "Private Events",
-      description: "Intimate to full buyouts",
+      title: "Private dining",
+      description: "Birthdays, work dinners, buyouts",
       icon: "users",
     },
     {
-      title: "Walk-Ins Welcome",
-      description: "Bar & high-top seating",
+      title: "Walk-ins welcome",
+      description: "Bar seats and high-tops nightly",
       icon: "chair",
     },
   ],
@@ -78,7 +78,7 @@ export const homepageData = {
       {
         title: "Dining",
         description:
-          "Seasonal cooking, balanced plates, and a menu built to be enjoyed, not overthought.",
+          "Seasonal plates, familiar dishes, and a menu built to be ordered without a speech first.",
         image: {
           label: "Dining Card",
           aspectRatio: "4 / 3",
@@ -87,16 +87,16 @@ export const homepageData = {
       {
         title: "Cocktails",
         description:
-          "Measured, balanced drinks and a bar that keeps up with the kitchen.",
+          "Cold martinis, house classics, and balanced drinks for the table.",
         image: {
           label: "Cocktail Card",
           aspectRatio: "4 / 3",
         } satisfies PlaceholderImageData,
       },
       {
-        title: "The Room",
+        title: "The room",
         description:
-          "A warm, low-lit space for long dinners, late rounds, and nights that stretch a little further.",
+          "Low light, good pacing, and tables for the kind of nights that end with one more round.",
         image: {
           label: "Room Card",
           aspectRatio: "4 / 3",
@@ -109,11 +109,11 @@ export const homepageData = {
     eyebrow: "From the kitchen",
     title: "From the kitchen",
     description:
-      "The kitchen leans on classic technique and lets the ingredients carry the dish. You’ll see familiar ideas — roast chicken, fresh pasta, well-cut steak — done with a bit more attention to detail than you might expect on a casual night out.",
+      "The menu stays familiar on purpose: steak, fish, pasta, roast chicken, good vegetables, proper sauce, and clean seasoning.",
     secondaryDescription:
-      "We change the menu often, but the approach stays the same: balanced plates, clean flavours, and nothing on the dish that doesn’t belong there.",
+      "The menu changes with the season and the market. Buy well, cook carefully, and leave off anything that does not earn its place.",
     cta: {
-      label: "Explore the Dinner Menu",
+      label: "View Dinner Menu",
       href: "#menus",
     } satisfies Cta,
     menuLink: {
@@ -128,22 +128,22 @@ export const homepageData = {
       {
         name: "Charred Striploin",
         price: "46",
-        description: "12oz striploin, bone marrow butter, roasted garlic",
+        description: "bone marrow butter, roasted garlic, jus",
       },
       {
-        name: "Brown Butter Halibut",
+        name: "Lake Erie Pickerel",
         price: "38",
-        description: "fennel, crispy capers, lemon brown butter",
+        description: "fennel, capers, lemon brown butter",
       },
       {
         name: "Coal-Roasted Carrots",
         price: "24",
-        description: "whipped labneh, dukkah, chili crunch",
+        description: "labneh, dukkah, chili crunch",
       },
       {
         name: "Ember Burger",
         price: "26",
-        description: "smash patty, aged cheddar, pickles, ember sauce",
+        description: "aged cheddar, pickles, ember sauce",
       },
     ] satisfies MenuHighlight[],
   },
@@ -152,30 +152,30 @@ export const homepageData = {
     eyebrow: "The bar",
     title: "The bar",
     description:
-      "The bar is built to keep up with the kitchen. Cocktails are measured and consistent, with a focus on balance over novelty. The wine list is practical and well-curated. Bottles are actually like to drink, not just collect. Beer stays local where it makes sense, with a few classics that never left for a reason.",
+      "The bar keeps pace with dinner service: cold martinis, fresh citrus, and a wine list that helps more than it performs.",
     cta: {
-      label: "See the Cocktail List",
+      label: "View Cocktails",
       href: "#cocktails",
     } satisfies Cta,
     image: {
       label: "Cocktail Feature",
       aspectRatio: "4 / 5",
     } satisfies PlaceholderImageData,
-    highlightTitle: "Sharp pours, no theatre.",
+    highlightTitle: "Cocktails for the table.",
     cocktails: [
       {
-        name: "Smoke Signal",
+        name: "House Martini",
         description:
-          "Mezcal, lapsang souchong, aperol, lime, agave, smoke.",
+          "gin or vodka, house vermouth, olive or lemon",
       },
       {
         name: "Burnt Orange Old Fashioned",
         description:
-          "Bourbon, burnt orange, demerara, black walnut bitters.",
+          "bourbon, burnt orange, demerara, bitters",
       },
       {
-        name: "House Martini",
-        description: "Gin or vodka, house vermouth, olive or lemon.",
+        name: "Niagara Negroni",
+        description: "gin, bitter orange, vermouth, orange oil",
       },
     ],
   },
@@ -184,26 +184,26 @@ export const homepageData = {
     eyebrow: "The room",
     title: "The room",
     description:
-      "It’s a space you don’t have to figure out. Dim enough in the evening, bright enough during the day, with a mix of tables, bar seats, and corners for people who plan to stay a while. We pay attention to the details — music, pacing, lighting — so you don’t have to.",
+      "Bright enough early, low-lit later, with banquettes, bar seats, and corners that make a long dinner feel easy.",
     image: {
       label: "Room Interior",
       aspectRatio: "16 / 7",
     } satisfies PlaceholderImageData,
     features: [
       "Date nights",
-      "Client dinners",
-      "Late drinks",
-      "Neighbourhood regulars",
+      "Work dinners",
+      "Late tables",
+      "Regulars",
     ],
   },
   privateDining: {
     id: "private-dining",
     eyebrow: "Private dining",
-    title: "Private dining, without the banquet energy.",
+    title: "Private dinners, done properly.",
     description:
-      "Intimate rooms, flexible menus, and a team that makes your event feel effortless. Birthdays, team dinners, client evenings, and full-room buyouts.",
+      "A separate room, flexible set menus, and the same service pace as the main floor.",
     cta: {
-      label: "Plan an Event",
+      label: "Start an Inquiry",
       href: "#private-dining",
     } satisfies Cta,
     image: {
@@ -219,9 +219,9 @@ export const homepageData = {
       {
         title: "Sunday Supper",
         description:
-          "A three-course family-style menu. Different every week. Always worth coming for.",
+          "A Sunday set menu built for lingering. Different each time, always dinner first.",
         cta: {
-          label: "Learn More",
+          label: "See Details",
           href: "#happenings",
         },
         image: {
@@ -232,9 +232,9 @@ export const homepageData = {
       {
         title: "Guest Bartender Night",
         description:
-          "A rotating cast of friends behind the bar, exclusive drinks, and a room with a little extra energy.",
+          "Friends from around Niagara behind the bar for one-night drinks and a louder room.",
         cta: {
-          label: "Learn More",
+          label: "See Details",
           href: "#happenings",
         },
         image: {
@@ -245,9 +245,9 @@ export const homepageData = {
       {
         title: "Late Night Vinyl",
         description:
-          "Fridays and Saturdays from 10pm. All classics, no requests, and strong drinks all night.",
+          "Fridays and Saturdays after 10. Records on, lights down, bar still moving.",
         cta: {
-          label: "Learn More",
+          label: "See Details",
           href: "#happenings",
         },
         image: {
@@ -279,7 +279,7 @@ export const homepageData = {
   },
   footer: {
     tagline:
-      "Seasonal cooking. Thoughtful drinks. A room worth settling into.",
+      "Seasonal plates. Good drinks. A room worth settling into.",
     navItems: footerNavItems,
     legalNavItems,
     socialLinks: siteConfig.social,

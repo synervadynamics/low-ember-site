@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+
+import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Low Ember | Neighbourhood Restaurant & Cocktail Bar",
-  description:
-    "A fictional premium neighbourhood restaurant and cocktail bar in St. Catharines, Ontario.",
+  description: siteConfig.description,
 };
 
 export default function RootLayout({

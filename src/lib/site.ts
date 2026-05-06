@@ -13,7 +13,7 @@ export const siteConfig = {
   name: "Low Ember",
   legalName: "Low Ember",
   description:
-    "A fictional premium neighbourhood restaurant and cocktail bar in St. Catharines, Ontario.",
+    "Dinner, cocktails, and private dining in downtown St. Catharines.",
   url: "https://lowember.ca",
   location: {
     city: "St. Catharines",
