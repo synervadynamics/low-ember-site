@@ -23,23 +23,23 @@ export function HeroSection() {
                 <div className="space-y-3 sm:space-y-4">
                   <Eyebrow>{hero.location}</Eyebrow>
 
-                  <div className="space-y-3 sm:space-y-4">
+                  <div className="space-y-2.5 sm:space-y-3">
                     <h1
                       id="hero-heading"
                       className="text-balance max-w-[10.5ch] font-serif text-[2.6rem] leading-[0.97] tracking-[-0.03em] text-[var(--color-text-soft)] sm:max-w-[11ch] sm:text-[3.25rem] md:max-w-[11.5ch] lg:max-w-[10.75ch] lg:text-[4rem] xl:max-w-[11ch] xl:text-[4.35rem]"
                     >
                       {hero.title}
                     </h1>
-                    <p className="max-w-[34rem] text-[0.98rem] leading-7 text-[var(--color-text-soft)]/90 sm:text-[1.04rem] sm:leading-7">
+                    <p className="max-w-[33rem] text-[0.94rem] leading-[1.68] text-[var(--color-text-soft)]/82 sm:text-[1rem] sm:leading-7">
                       {hero.description}
                     </p>
-                    <p className="max-w-[35rem] text-sm leading-[1.65] text-[var(--color-muted)] sm:text-[0.98rem] sm:leading-7">
+                    <p className="max-w-[33rem] text-[0.88rem] leading-[1.6] text-[var(--color-muted)]/88 sm:text-[0.93rem] sm:leading-[1.65]">
                       {hero.secondaryDescription}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap sm:items-center">
+                <div className="flex flex-col gap-3 pt-1.5 sm:flex-row sm:flex-wrap sm:items-center">
                   <Button href={hero.primaryCta.href}>{hero.primaryCta.label}</Button>
                   <Button href={hero.secondaryCta.href} variant="secondary">
                     {hero.secondaryCta.label}

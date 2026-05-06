@@ -33,7 +33,7 @@ export const homepageData = {
     description:
       "Seasonal plates, balanced cocktails, and warm service from five until late.",
     secondaryDescription:
-      "Bar seats for walk-ins, tables for long dinners, and a private room that keeps the same pace.",
+      "Bar seats for walk-ins, long tables for dinner, and a private room that keeps the pace.",
     primaryCta: {
       label: siteConfig.reservation.label,
       href: siteConfig.reservation.href,
