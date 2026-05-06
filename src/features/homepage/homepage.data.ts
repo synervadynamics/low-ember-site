@@ -29,11 +29,11 @@ type EventItem = {
 
 export const homepageData = {
   hero: {
-    title: "A downtown room for dinner and another round.",
+    title: "Dinner worth settling into.",
     description:
       "Seasonal plates, balanced cocktails, and warm service from five until late.",
     secondaryDescription:
-      "Dinner first, bar seats for walk-ins, and a private room that still feels like part of the house.",
+      "Bar seats for walk-ins, tables for long dinners, and a private room that keeps the same pace.",
     primaryCta: {
       label: siteConfig.reservation.label,
       href: siteConfig.reservation.href,
@@ -42,7 +42,7 @@ export const homepageData = {
       label: "View Menus",
       href: "#menus",
     },
-    location: "Downtown St. Catharines",
+    location: "St. Catharines, Ontario",
     meta: "Dinner, cocktails, private dining",
     image: {
       label: "Hero Interior",
