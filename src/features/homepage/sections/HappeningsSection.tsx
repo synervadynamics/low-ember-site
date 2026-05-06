@@ -12,7 +12,7 @@ export function HappeningsSection() {
       aria-labelledby="happenings-section-heading"
       className="page-section pt-4 sm:pt-6"
     >
-      <Container className="space-y-6 sm:space-y-8">
+      <Container className="space-y-6 sm:space-y-7">
         <SectionHeader
           eyebrow={happenings.eyebrow}
           title={happenings.title}
@@ -21,7 +21,7 @@ export function HappeningsSection() {
           className="space-y-4"
         />
 
-        <div className="grid gap-4 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {happenings.events.map((event) => (
             <EventCard
               key={event.title}

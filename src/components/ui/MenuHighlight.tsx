@@ -16,12 +16,12 @@ export function MenuHighlight({
   return (
     <article
       className={cn(
-        "border-b border-[color:var(--color-border)] pb-4 last:border-b-0 last:pb-0",
+        "border-b border-[color:var(--color-border)] pb-4 last:border-b-0 last:pb-0 sm:pb-5",
         className,
       )}
     >
       <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-        <h3 className="font-serif text-lg leading-tight text-[var(--color-text-soft)]">
+        <h3 className="font-serif text-[1.12rem] leading-tight text-[var(--color-text-soft)] sm:text-[1.2rem]">
           {name}
         </h3>
         {price ? (

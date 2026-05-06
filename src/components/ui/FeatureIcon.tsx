@@ -34,7 +34,7 @@ function FallbackIcon() {
 
 export function FeatureIcon({ name, className }: FeatureIconProps) {
   const shared = cn(
-    "inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--color-border)] bg-[color:rgba(17,16,13,0.82)] text-[var(--color-brass)]",
+    "inline-flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)] border border-[color:var(--color-border)] bg-[linear-gradient(180deg,rgba(21,17,13,0.92)_0%,rgba(12,10,8,0.96)_100%)] text-[var(--color-brass)]",
     className,
   );
 

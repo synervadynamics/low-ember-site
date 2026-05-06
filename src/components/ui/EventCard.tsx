@@ -28,12 +28,12 @@ export function EventCard({
         <PlaceholderImage
           label={image.label}
           aspectRatio={image.aspectRatio}
-          className="min-h-44 rounded-none border-x-0 border-t-0"
+          className="min-h-48 rounded-none border-x-0 border-t-0 sm:min-h-52"
           decorative
         />
       ) : null}
-      <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6">
-        <h3 className="font-serif text-2xl leading-tight text-[var(--color-text-soft)]">
+      <div className="flex flex-1 flex-col gap-4 border-t border-[color:var(--color-border)] px-5 py-5 sm:px-6 sm:py-6">
+        <h3 className="font-serif text-[1.55rem] leading-[1.08] text-[var(--color-text-soft)] sm:text-[1.72rem]">
           {title}
         </h3>
         <p className="flex-1 text-sm leading-7 text-[var(--color-muted)]">

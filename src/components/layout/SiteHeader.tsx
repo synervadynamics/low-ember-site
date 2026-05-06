@@ -13,12 +13,12 @@ export function SiteHeader() {
   const menuId = useId();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[color:var(--color-border)] bg-[color:rgba(7,6,4,0.9)] backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[color:rgba(197,138,69,0.14)] bg-[color:rgba(5,4,3,0.84)] backdrop-blur-xl">
       <Container>
-        <div className="flex min-h-[var(--header-height)] items-center gap-3 py-3">
+        <div className="flex min-h-[var(--header-height)] items-center gap-3 py-2.5">
           <Link
             href="/"
-            className="shrink-0 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--color-brass)] transition-colors hover:text-[var(--color-text-soft)]"
+            className="shrink-0 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-brass)] transition-colors hover:text-[var(--color-text-soft)] sm:text-[1.02rem]"
           >
             {siteConfig.name}
           </Link>
@@ -27,12 +27,12 @@ export function SiteHeader() {
             aria-label="Primary navigation"
             className="hidden flex-1 items-center justify-center lg:flex"
           >
-            <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-2">
               {primaryNavItems.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--color-muted)] transition-colors hover:text-[var(--color-text-soft)]"
+                    className="text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--color-muted)] transition-colors hover:text-[var(--color-text-soft)]"
                   >
                     {item.label}
                   </a>
@@ -42,7 +42,7 @@ export function SiteHeader() {
           </nav>
 
           <div className="ml-auto hidden lg:block">
-            <Button href={siteConfig.reservation.href}>
+            <Button href={siteConfig.reservation.href} className="px-4">
               {siteConfig.reservation.label}
             </Button>
           </div>
@@ -50,7 +50,7 @@ export function SiteHeader() {
           <div className="ml-auto flex items-center gap-2 lg:hidden">
             <Button
               href={siteConfig.reservation.href}
-              className="px-3 py-2 text-[10px] sm:px-4"
+              className="px-3 py-2 text-[9px] sm:px-4"
             >
               Reserve
             </Button>
@@ -60,7 +60,7 @@ export function SiteHeader() {
               aria-expanded={isMenuOpen}
               aria-controls={menuId}
               onClick={() => setIsMenuOpen((current) => !current)}
-              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-[var(--radius-sm)] border border-[color:var(--color-border-strong)] bg-[color:rgba(17,16,13,0.82)] text-[var(--color-text-soft)] transition-colors hover:border-[color:var(--color-brass)] hover:bg-[color:rgba(197,138,69,0.08)] active:bg-[color:rgba(197,138,69,0.12)]"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-[var(--radius-sm)] border border-[color:var(--color-border-strong)] bg-[linear-gradient(180deg,rgba(19,17,14,0.94)_0%,rgba(11,10,8,0.96)_100%)] text-[var(--color-text-soft)] transition-colors hover:border-[color:var(--color-brass)] hover:bg-[color:rgba(197,138,69,0.08)] active:bg-[color:rgba(197,138,69,0.12)]"
             >
               <span className="sr-only">
                 {isMenuOpen ? "Close menu" : "Open menu"}
@@ -93,12 +93,14 @@ export function SiteHeader() {
           id={menuId}
           className={cn(
             "overflow-hidden transition-[grid-template-rows,opacity] duration-200 lg:hidden",
-            isMenuOpen ? "grid grid-rows-[1fr] pb-4 opacity-100" : "grid grid-rows-[0fr] opacity-0",
+            isMenuOpen
+              ? "grid grid-rows-[1fr] pb-3 opacity-100"
+              : "grid grid-rows-[0fr] opacity-0",
           )}
         >
           <nav
             aria-label="Mobile navigation"
-            className="min-h-0 overflow-hidden rounded-[var(--radius-md)] border border-[color:var(--color-border)] bg-[color:rgba(17,16,13,0.92)]"
+            className="min-h-0 overflow-hidden rounded-[var(--radius-md)] border border-[color:var(--color-border)] bg-[linear-gradient(180deg,rgba(16,14,11,0.98)_0%,rgba(10,9,7,0.98)_100%)]"
           >
             <ul className="grid divide-y divide-[color:var(--color-border)]">
               {primaryNavItems.map((item) => (

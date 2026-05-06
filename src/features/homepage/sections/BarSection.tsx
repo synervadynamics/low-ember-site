@@ -14,8 +14,8 @@ export function BarSection() {
       className="page-section pt-4 sm:pt-6"
     >
       <Container>
-        <div className="grid gap-5 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] xl:grid-cols-[minmax(0,0.85fr)_minmax(0,0.95fr)_minmax(0,0.78fr)]">
-          <div className="panel panel-border flex flex-col gap-6 p-5 sm:p-6 lg:p-7 xl:order-1">
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] xl:grid-cols-[minmax(0,0.74fr)_minmax(0,0.98fr)_minmax(0,0.74fr)]">
+          <div className="panel panel-border flex flex-col gap-5 p-5 sm:p-6 lg:p-6 xl:order-1">
             <SectionHeader
               eyebrow={bar.eyebrow}
               title={bar.title}
@@ -35,23 +35,24 @@ export function BarSection() {
               label={bar.image.label}
               aspectRatio={bar.image.aspectRatio}
               decorative
-              className="min-h-[22rem] rounded-none border-0 sm:min-h-[28rem] xl:min-h-full"
+              className="min-h-[24rem] rounded-none border-0 sm:min-h-[30rem] xl:min-h-full"
             />
           </div>
 
-          <div className="panel panel-border flex flex-col gap-6 p-5 sm:p-6 lg:p-7 xl:order-3">
+          <div className="panel panel-border flex flex-col gap-5 p-5 sm:p-6 lg:p-6 xl:order-3">
             <div className="space-y-4">
-              <h3 className="max-w-[14ch] font-serif text-3xl leading-tight text-[var(--color-text-soft)] sm:text-4xl">
+              <h3 className="max-w-[10ch] font-serif text-[2rem] leading-[1.06] text-[var(--color-text-soft)] sm:text-[2.5rem]">
                 {bar.highlightTitle}
               </h3>
+              <div className="h-px w-12 bg-[color:var(--color-border-strong)]" />
             </div>
             <div className="space-y-5">
               {bar.cocktails.map((item) => (
                 <article
                   key={item.name}
-                  className="border-b border-[color:var(--color-border)] pb-4 last:border-b-0 last:pb-0"
+                  className="border-b border-[color:var(--color-border)] pb-4 last:border-b-0 last:pb-0 sm:pb-5"
                 >
-                  <h4 className="font-serif text-lg leading-tight text-[var(--color-text-soft)]">
+                  <h4 className="font-serif text-[1.12rem] leading-tight text-[var(--color-text-soft)] sm:text-[1.2rem]">
                     {item.name}
                   </h4>
                   <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">

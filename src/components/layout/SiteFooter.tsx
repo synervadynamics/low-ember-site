@@ -8,17 +8,17 @@ export function SiteFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[color:var(--color-border)] bg-[color:rgba(9,8,6,0.92)] py-12 sm:py-14">
+    <footer className="border-t border-[color:var(--color-border)] bg-[linear-gradient(180deg,rgba(9,8,6,0.94)_0%,rgba(6,5,4,0.98)_100%)] py-10 sm:py-12">
       <Container>
-        <div className="grid gap-10 md:grid-cols-[minmax(0,1.3fr)_minmax(0,0.8fr)_minmax(0,0.8fr)]">
+        <div className="grid gap-9 border-b border-[color:var(--color-border)] pb-8 md:grid-cols-[minmax(0,1.25fr)_minmax(0,0.7fr)_minmax(0,0.95fr)] md:items-start">
           <div className="space-y-4">
             <Link
               href="/"
-              className="inline-block text-base font-semibold uppercase tracking-[0.22em] text-[var(--color-brass)]"
+              className="inline-block text-[1.9rem] font-semibold uppercase tracking-[-0.03em] text-[var(--color-brass)] sm:text-[2.25rem]"
             >
               {siteConfig.name}
             </Link>
-            <p className="max-w-md font-serif text-xl leading-snug text-[var(--color-text-soft)]">
+            <p className="max-w-md font-serif text-[1.35rem] leading-[1.18] text-[var(--color-text-soft)] sm:text-[1.55rem]">
               {homepageData.footer.tagline}
             </p>
             <p className="max-w-sm text-sm leading-7 text-[var(--color-muted)]">
@@ -27,7 +27,7 @@ export function SiteFooter() {
           </div>
 
           <div className="space-y-4">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-brass)]/90">
+            <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--color-brass)]/90 sm:text-[11px]">
               Explore
             </p>
             <ul className="space-y-3">
@@ -46,7 +46,7 @@ export function SiteFooter() {
 
           <div className="space-y-6">
             <div className="space-y-4">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-brass)]/90">
+              <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--color-brass)]/90 sm:text-[11px]">
                 Connect
               </p>
               <ul className="space-y-3">
@@ -64,7 +64,7 @@ export function SiteFooter() {
             </div>
 
             <div className="space-y-4">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-brass)]/90">
+              <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--color-brass)]/90 sm:text-[11px]">
                 Legal
               </p>
               <ul className="space-y-3">
@@ -83,7 +83,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-[color:var(--color-border)] pt-5 text-xs text-[var(--color-muted)]">
+        <div className="mt-5 flex flex-col gap-3 text-xs text-[var(--color-muted)] sm:flex-row sm:items-center sm:justify-between">
           <p>
             &copy; {currentYear} {siteConfig.legalName}. All rights reserved.
           </p>

@@ -35,15 +35,15 @@ export function LocationSection() {
       className="page-section pt-4 sm:pt-6"
     >
       <Container>
-        <div className="grid gap-5 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-stretch">
-          <div className="panel panel-border flex flex-col gap-6 p-5 sm:p-6 lg:p-7">
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:items-stretch">
+          <div className="panel panel-border flex flex-col gap-5 p-5 sm:p-6 lg:p-6">
             <SectionHeader
               title={contact.title}
               titleId="location-section-heading"
               className="space-y-4"
             />
 
-            <div className="grid gap-5 sm:gap-6">
+            <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
               <DetailBlock label="Address">
                 <address className="not-italic text-[var(--color-text-soft)]">
                   {contact.address.map((line) => (
@@ -60,7 +60,7 @@ export function LocationSection() {
                 </ul>
               </DetailBlock>
 
-              <div className="grid gap-5 sm:grid-cols-2">
+              <div className="grid gap-5 sm:col-span-2 sm:grid-cols-2 xl:col-span-1 xl:grid-cols-1">
                 <DetailBlock label="Phone">
                   <a
                     href={contact.phoneHref}
@@ -79,7 +79,9 @@ export function LocationSection() {
                   </a>
                 </DetailBlock>
               </div>
+            </div>
 
+            <div className="flex flex-col gap-5 border-t border-[color:var(--color-border)] pt-4 sm:flex-row sm:items-center sm:justify-between">
               <DetailBlock label="Instagram">
                 <a
                   href={contact.instagramHref}
@@ -88,10 +90,9 @@ export function LocationSection() {
                   {contact.instagram}
                 </a>
               </DetailBlock>
-            </div>
-
-            <div className="pt-1">
-              <Button href={contact.cta.href}>{contact.cta.label}</Button>
+              <Button href={contact.cta.href} className="w-full sm:w-auto">
+                {contact.cta.label}
+              </Button>
             </div>
           </div>
 

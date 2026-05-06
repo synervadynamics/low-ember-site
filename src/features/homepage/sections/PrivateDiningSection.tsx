@@ -15,8 +15,8 @@ export function PrivateDiningSection() {
     >
       <Container>
         <div className="panel panel-border overflow-hidden">
-          <div className="grid gap-6 p-5 sm:p-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-8 lg:p-7 xl:p-8">
-            <div className="flex flex-col gap-6">
+          <div className="grid gap-0 lg:min-h-[27rem] lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)]">
+            <div className="flex flex-col justify-center gap-6 px-5 py-7 sm:px-6 sm:py-8 lg:px-7 xl:px-8">
               <SectionHeader
                 eyebrow={privateDining.eyebrow}
                 title={privateDining.title}
@@ -33,13 +33,12 @@ export function PrivateDiningSection() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute inset-0 rounded-[var(--radius-lg)] bg-[radial-gradient(circle_at_top_right,rgba(197,138,69,0.14),transparent_42%)]" />
+            <div className="relative border-t border-[color:var(--color-border)] lg:border-l lg:border-t-0">
               <PlaceholderImage
                 label={privateDining.image.label}
                 aspectRatio={privateDining.image.aspectRatio}
                 decorative
-                className="min-h-[18rem] sm:min-h-[22rem] lg:min-h-full"
+                className="min-h-[18rem] rounded-none border-0 sm:min-h-[22rem] lg:min-h-full"
               />
             </div>
           </div>

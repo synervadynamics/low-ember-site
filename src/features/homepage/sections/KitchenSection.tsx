@@ -16,8 +16,8 @@ export function KitchenSection() {
       className="page-section pt-4 sm:pt-6"
     >
       <Container>
-        <div className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.15fr)] xl:grid-cols-[minmax(0,0.78fr)_minmax(0,1.08fr)_minmax(0,0.8fr)]">
-          <div className="panel panel-border flex flex-col gap-6 p-5 sm:p-6 lg:p-7">
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.18fr)] xl:grid-cols-[minmax(0,0.72fr)_minmax(0,1.12fr)_minmax(0,0.72fr)]">
+          <div className="panel panel-border flex flex-col gap-5 p-5 sm:p-6 lg:p-6">
             <SectionHeader
               eyebrow={kitchen.eyebrow}
               title={kitchen.title}
@@ -38,11 +38,11 @@ export function KitchenSection() {
               label={kitchen.image.label}
               aspectRatio={kitchen.image.aspectRatio}
               decorative
-              className="min-h-[22rem] rounded-none border-0 sm:min-h-[28rem] xl:min-h-full"
+              className="min-h-[24rem] rounded-none border-0 sm:min-h-[30rem] xl:min-h-full"
             />
           </div>
 
-          <div className="panel panel-border flex flex-col gap-6 p-5 sm:p-6 lg:p-7 xl:self-stretch">
+          <div className="panel panel-border flex flex-col gap-5 p-5 sm:p-6 lg:p-6 xl:self-stretch">
             <div className="space-y-5">
               {kitchen.highlights.map((item) => (
                 <MenuHighlight
@@ -53,7 +53,7 @@ export function KitchenSection() {
                 />
               ))}
             </div>
-            <div className="mt-auto border-t border-[color:var(--color-border)] pt-2">
+            <div className="mt-auto border-t border-[color:var(--color-border)] pt-3">
               <LinkArrow href={kitchen.menuLink.href}>
                 {kitchen.menuLink.label}
               </LinkArrow>

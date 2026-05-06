@@ -23,7 +23,7 @@ export function SectionHeader({
   return (
     <header
       className={cn(
-        "space-y-3",
+        "space-y-3.5",
         isCentered && "mx-auto max-w-3xl text-center",
         className,
       )}
@@ -35,14 +35,14 @@ export function SectionHeader({
       ) : null}
       <h2
         id={titleId}
-        className="text-balance font-serif text-3xl leading-tight text-[var(--color-text-soft)] sm:text-4xl lg:text-5xl"
+        className="text-balance font-serif text-[2rem] leading-[1.04] tracking-[-0.02em] text-[var(--color-text-soft)] sm:text-[2.5rem] lg:text-[3.25rem]"
       >
         {title}
       </h2>
       {description ? (
         <p
           className={cn(
-            "text-balance max-w-2xl text-sm leading-7 text-[var(--color-muted)] sm:text-base",
+            "text-balance max-w-2xl text-sm leading-7 text-[var(--color-muted)] sm:text-[0.97rem]",
             isCentered && "mx-auto",
           )}
         >
