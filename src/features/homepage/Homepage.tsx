@@ -5,6 +5,8 @@ import { DiningCardsSection } from "@/features/homepage/sections/DiningCardsSect
 import { FeatureStrip } from "@/features/homepage/sections/FeatureStrip";
 import { HeroSection } from "@/features/homepage/sections/HeroSection";
 import { KitchenSection } from "@/features/homepage/sections/KitchenSection";
+import { PrivateDiningSection } from "@/features/homepage/sections/PrivateDiningSection";
+import { RoomSection } from "@/features/homepage/sections/RoomSection";
 
 export function Homepage() {
   return (
@@ -22,6 +24,8 @@ export function Homepage() {
         <DiningCardsSection />
         <KitchenSection />
         <BarSection />
+        <RoomSection />
+        <PrivateDiningSection />
       </main>
       <SiteFooter />
     </div>
