@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { LinkArrow } from "@/components/ui/LinkArrow";
+import { MediaFrame } from "@/components/ui/MediaFrame";
 import { MenuHighlight } from "@/components/ui/MenuHighlight";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { homepageData } from "@/features/homepage/homepage.data";
 
@@ -34,10 +34,8 @@ export function KitchenSection() {
           </div>
 
           <div className="panel panel-border overflow-hidden xl:order-none">
-            <PlaceholderImage
-              label={kitchen.image.label}
-              aspectRatio={kitchen.image.aspectRatio}
-              decorative
+            <MediaFrame
+              image={kitchen.image}
               className="min-h-[24rem] rounded-none border-0 sm:min-h-[30rem] xl:min-h-full"
             />
           </div>

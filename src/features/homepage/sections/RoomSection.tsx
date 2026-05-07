@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { FeatureIcon } from "@/components/ui/FeatureIcon";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { MediaFrame } from "@/components/ui/MediaFrame";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { homepageData } from "@/features/homepage/homepage.data";
 
@@ -31,10 +31,8 @@ export function RoomSection() {
             </div>
 
             <div className="border-t border-[color:var(--color-border)] lg:border-l lg:border-t-0">
-              <PlaceholderImage
-                label={room.image.label}
-                aspectRatio={room.image.aspectRatio}
-                decorative
+              <MediaFrame
+                image={room.image}
                 className="min-h-[20rem] rounded-none border-0 sm:min-h-[24rem] lg:min-h-full"
               />
             </div>

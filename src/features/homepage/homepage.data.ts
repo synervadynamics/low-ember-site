@@ -1,3 +1,4 @@
+import type { MediaFrameImage } from "@/components/ui/MediaFrame";
 import {
   footerNavItems,
   legalNavItems,
@@ -7,11 +8,6 @@ import {
 type Cta = {
   label: string;
   href: string;
-};
-
-type PlaceholderImageData = {
-  label: string;
-  aspectRatio: string;
 };
 
 type MenuHighlight = {
@@ -24,7 +20,7 @@ type EventItem = {
   title: string;
   description: string;
   cta: Cta;
-  image: PlaceholderImageData;
+  image: MediaFrameImage;
 };
 
 export const homepageData = {
@@ -47,7 +43,12 @@ export const homepageData = {
     image: {
       label: "Hero Interior",
       aspectRatio: "16 / 9",
-    } satisfies PlaceholderImageData,
+      alt: "Low-lit dining room and bar with warm amber lighting.",
+      objectPosition: "center center",
+      priority: true,
+      sizes: "(min-width: 1024px) 50vw, 100vw",
+      decorative: true,
+    } satisfies MediaFrameImage,
   },
   featureStrip: [
     {
@@ -82,7 +83,11 @@ export const homepageData = {
         image: {
           label: "Dining Card",
           aspectRatio: "4 / 3",
-        } satisfies PlaceholderImageData,
+          alt: "Seasonal dinner plate in warm low light.",
+          objectPosition: "center center",
+          sizes: "(min-width: 1024px) 33vw, 100vw",
+          decorative: true,
+        } satisfies MediaFrameImage,
       },
       {
         title: "Cocktails",
@@ -91,7 +96,11 @@ export const homepageData = {
         image: {
           label: "Cocktail Card",
           aspectRatio: "4 / 3",
-        } satisfies PlaceholderImageData,
+          alt: "Cocktail served over ice with orange garnish.",
+          objectPosition: "center center",
+          sizes: "(min-width: 1024px) 33vw, 100vw",
+          decorative: true,
+        } satisfies MediaFrameImage,
       },
       {
         title: "The room",
@@ -100,7 +109,11 @@ export const homepageData = {
         image: {
           label: "Room Card",
           aspectRatio: "4 / 3",
-        } satisfies PlaceholderImageData,
+          alt: "Warm dining room with low lighting and set tables.",
+          objectPosition: "center center",
+          sizes: "(min-width: 1024px) 33vw, 100vw",
+          decorative: true,
+        } satisfies MediaFrameImage,
       },
     ],
   },
@@ -123,7 +136,11 @@ export const homepageData = {
     image: {
       label: "Kitchen Feature",
       aspectRatio: "4 / 5",
-    } satisfies PlaceholderImageData,
+      alt: "Grilled steak sliced on a dark plate with herbs.",
+      objectPosition: "center center",
+      sizes: "(min-width: 1024px) 60vw, 100vw",
+      decorative: true,
+    } satisfies MediaFrameImage,
     highlights: [
       {
         name: "Charred Striploin",
@@ -160,7 +177,11 @@ export const homepageData = {
     image: {
       label: "Cocktail Feature",
       aspectRatio: "4 / 5",
-    } satisfies PlaceholderImageData,
+      alt: "Amber cocktail in a coupe glass on a dark bar.",
+      objectPosition: "center center",
+      sizes: "(min-width: 1024px) 60vw, 100vw",
+      decorative: true,
+    } satisfies MediaFrameImage,
     highlightTitle: "Cocktails for the table.",
     cocktails: [
       {
@@ -188,7 +209,11 @@ export const homepageData = {
     image: {
       label: "Room Interior",
       aspectRatio: "16 / 7",
-    } satisfies PlaceholderImageData,
+      alt: "Low-lit dining room with candles, banquettes, and bar seating.",
+      objectPosition: "center center",
+      sizes: "(min-width: 1024px) 60vw, 100vw",
+      decorative: true,
+    } satisfies MediaFrameImage,
     features: [
       "Date nights",
       "Work dinners",
@@ -209,7 +234,11 @@ export const homepageData = {
     image: {
       label: "Private Dining",
       aspectRatio: "16 / 9",
-    } satisfies PlaceholderImageData,
+      alt: "Private dining table set with wine glasses and candlelight.",
+      objectPosition: "center center",
+      sizes: "(min-width: 1024px) 60vw, 100vw",
+      decorative: true,
+    } satisfies MediaFrameImage,
   },
   happenings: {
     id: "happenings",
@@ -227,6 +256,10 @@ export const homepageData = {
         image: {
           label: "Sunday Supper",
           aspectRatio: "4 / 3",
+          alt: "Shared dinner plates on a warm restaurant table.",
+          objectPosition: "center center",
+          sizes: "(min-width: 1024px) 33vw, 100vw",
+          decorative: true,
         },
       },
       {
@@ -240,6 +273,10 @@ export const homepageData = {
         image: {
           label: "Guest Bartender Night",
           aspectRatio: "4 / 3",
+          alt: "Bartender preparing a cocktail behind the bar.",
+          objectPosition: "center center",
+          sizes: "(min-width: 1024px) 33vw, 100vw",
+          decorative: true,
         },
       },
       {
@@ -253,6 +290,10 @@ export const homepageData = {
         image: {
           label: "Late Night Vinyl",
           aspectRatio: "4 / 3",
+          alt: "Vinyl record beside a late-night drink.",
+          objectPosition: "center center",
+          sizes: "(min-width: 1024px) 33vw, 100vw",
+          decorative: true,
         },
       },
     ] satisfies EventItem[],
@@ -275,7 +316,11 @@ export const homepageData = {
     map: {
       label: "Map Placeholder",
       aspectRatio: "16 / 9",
-    } satisfies PlaceholderImageData,
+      alt: "Dark map showing the Low Ember location.",
+      objectPosition: "center center",
+      sizes: "(min-width: 1024px) 50vw, 100vw",
+      decorative: true,
+    } satisfies MediaFrameImage,
   },
   footer: {
     tagline:

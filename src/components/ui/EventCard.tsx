@@ -1,12 +1,12 @@
 import { cn } from "@/lib/utils";
 import { LinkArrow } from "./LinkArrow";
-import { PlaceholderImage } from "./PlaceholderImage";
+import { MediaFrame, type MediaFrameImage } from "./MediaFrame";
 
 type EventCardProps = {
   title: string;
   description: string;
   cta?: { label: string; href: string };
-  image?: { label: string; aspectRatio?: string };
+  image?: MediaFrameImage;
   className?: string;
 };
 
@@ -25,11 +25,9 @@ export function EventCard({
       )}
     >
       {image ? (
-        <PlaceholderImage
-          label={image.label}
-          aspectRatio={image.aspectRatio}
+        <MediaFrame
+          image={image}
           className="min-h-48 rounded-none border-x-0 border-t-0 sm:min-h-52"
-          decorative
         />
       ) : null}
       <div className="flex flex-1 flex-col gap-4 border-t border-[color:var(--color-border)] px-5 py-5 sm:px-6 sm:py-6">

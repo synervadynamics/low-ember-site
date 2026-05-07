@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { MediaFrame } from "@/components/ui/MediaFrame";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { homepageData } from "@/features/homepage/homepage.data";
 
@@ -97,10 +97,8 @@ export function LocationSection() {
           </div>
 
           <div className="panel panel-border overflow-hidden p-3 sm:p-4">
-            <PlaceholderImage
-              label={contact.map.label}
-              aspectRatio={contact.map.aspectRatio}
-              decorative
+            <MediaFrame
+              image={contact.map}
               className="min-h-[16rem] sm:min-h-[20rem] lg:min-h-full"
             />
           </div>

@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/Container";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { MediaFrame } from "@/components/ui/MediaFrame";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { homepageData } from "@/features/homepage/homepage.data";
 
@@ -30,10 +30,8 @@ export function DiningCardsSection() {
                 key={card.title}
                 className="panel panel-border flex h-full flex-col overflow-hidden transition-colors duration-200 hover:border-[color:var(--color-border-strong)] active:border-[color:var(--color-border-strong)]"
               >
-                <PlaceholderImage
-                  label={card.image.label}
-                  aspectRatio={card.image.aspectRatio}
-                  decorative
+                <MediaFrame
+                  image={card.image}
                   className="min-h-56 rounded-none border-x-0 border-t-0 sm:min-h-64"
                 />
                 <div className="flex flex-1 flex-col gap-3 border-t border-[color:var(--color-border)] px-5 py-5 sm:px-6 sm:py-6">

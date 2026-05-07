@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { FeatureIcon } from "@/components/ui/FeatureIcon";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { MediaFrame } from "@/components/ui/MediaFrame";
 import { homepageData } from "@/features/homepage/homepage.data";
 
 export function HeroSection() {
@@ -61,10 +61,8 @@ export function HeroSection() {
             </div>
 
             <div className="relative border-t border-[color:var(--color-border)] lg:border-l lg:border-t-0">
-              <PlaceholderImage
-                label={hero.image.label}
-                aspectRatio={hero.image.aspectRatio}
-                decorative
+              <MediaFrame
+                image={hero.image}
                 className="min-h-[20rem] rounded-none border-0 sm:min-h-[24rem] lg:min-h-full"
               />
             </div>

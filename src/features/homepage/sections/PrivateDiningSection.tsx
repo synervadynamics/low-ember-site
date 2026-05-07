@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { MediaFrame } from "@/components/ui/MediaFrame";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { homepageData } from "@/features/homepage/homepage.data";
 
@@ -34,10 +34,8 @@ export function PrivateDiningSection() {
             </div>
 
             <div className="relative border-t border-[color:var(--color-border)] lg:border-l lg:border-t-0">
-              <PlaceholderImage
-                label={privateDining.image.label}
-                aspectRatio={privateDining.image.aspectRatio}
-                decorative
+              <MediaFrame
+                image={privateDining.image}
                 className="min-h-[18rem] rounded-none border-0 sm:min-h-[22rem] lg:min-h-full"
               />
             </div>

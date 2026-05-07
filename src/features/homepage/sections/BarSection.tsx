@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { MediaFrame } from "@/components/ui/MediaFrame";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { homepageData } from "@/features/homepage/homepage.data";
 
@@ -31,10 +31,8 @@ export function BarSection() {
           </div>
 
           <div className="panel panel-border overflow-hidden xl:order-2">
-            <PlaceholderImage
-              label={bar.image.label}
-              aspectRatio={bar.image.aspectRatio}
-              decorative
+            <MediaFrame
+              image={bar.image}
               className="min-h-[24rem] rounded-none border-0 sm:min-h-[30rem] xl:min-h-full"
             />
           </div>
