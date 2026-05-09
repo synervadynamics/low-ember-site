@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -17,6 +19,23 @@ export function HeroSection() {
       <Container>
         <div className="panel panel-border relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(197,138,69,0.06),transparent_32%),linear-gradient(90deg,rgba(0,0,0,0.16)_0%,transparent_48%)]" />
+          <div
+            className="pointer-events-none absolute inset-0 z-[1] hidden overflow-hidden lg:block"
+            aria-hidden="true"
+          >
+            {hero.image.src ? (
+              <Image
+                src={hero.image.src}
+                alt=""
+                fill
+                priority={hero.image.priority}
+                sizes={hero.image.sizes}
+                className="object-cover"
+                style={{ objectPosition: "68% center" }}
+              />
+            ) : null}
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,color-mix(in_srgb,var(--color-bg)_99%,black)_0%,color-mix(in_srgb,var(--color-bg-soft)_97%,black)_20%,rgba(7,6,4,0.94)_34%,rgba(7,6,4,0.72)_48%,rgba(7,6,4,0.36)_62%,transparent_78%)]" />
+          </div>
           <div className="grid min-h-[32rem] gap-0 md:min-h-[35rem] lg:min-h-[36.5rem] lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] xl:min-h-[38rem]">
             <div className="relative z-10 flex flex-col px-5 py-7 sm:px-7 sm:py-8 lg:px-8 lg:py-7 xl:px-10 xl:py-8">
               <div className="flex flex-1 flex-col justify-center gap-5 lg:gap-6">
@@ -60,10 +79,12 @@ export function HeroSection() {
               </div>
             </div>
 
-            <div className="relative border-t border-[color:var(--color-border)] lg:border-l lg:border-t-0">
+            <div className="hidden lg:block" aria-hidden="true" />
+
+            <div className="relative overflow-hidden border-t border-[color:var(--color-border)] lg:hidden">
               <MediaFrame
                 image={hero.image}
-                className="min-h-[20rem] rounded-none border-0 sm:min-h-[24rem] lg:min-h-full"
+                className="min-h-[20rem] rounded-none border-0 sm:min-h-[24rem]"
               />
             </div>
           </div>

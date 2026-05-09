@@ -41,12 +41,13 @@ export const homepageData = {
     location: "St. Catharines, Ontario",
     meta: "Dinner, cocktails, private dining",
     image: {
+      src: "/images/low-ember/homepage/hero/hero-interior.jpg",
       label: "Hero Interior",
       aspectRatio: "16 / 9",
       alt: "Low-lit dining room and bar with warm amber lighting.",
       objectPosition: "center center",
       priority: true,
-      sizes: "(min-width: 1024px) 50vw, 100vw",
+      sizes: "100vw",
       decorative: true,
     } satisfies MediaFrameImage,
   },
@@ -81,6 +82,7 @@ export const homepageData = {
         description:
           "Seasonal plates, familiar dishes, and a menu built to be ordered without a speech first.",
         image: {
+          src: "/images/low-ember/homepage/cards/dining-card.jpg",
           label: "Dining Card",
           aspectRatio: "4 / 3",
           alt: "Seasonal dinner plate in warm low light.",
@@ -94,6 +96,7 @@ export const homepageData = {
         description:
           "Cold martinis, house classics, and balanced drinks for the table.",
         image: {
+          src: "/images/low-ember/homepage/cards/cocktail-card.jpg",
           label: "Cocktail Card",
           aspectRatio: "4 / 3",
           alt: "Cocktail served over ice with orange garnish.",
@@ -107,6 +110,7 @@ export const homepageData = {
         description:
           "Low light, good pacing, and tables for the kind of nights that end with one more round.",
         image: {
+          src: "/images/low-ember/homepage/cards/room-card.jpg",
           label: "Room Card",
           aspectRatio: "4 / 3",
           alt: "Warm dining room with low lighting and set tables.",
@@ -134,6 +138,7 @@ export const homepageData = {
       href: "#menus",
     } satisfies Cta,
     image: {
+      src: "/images/low-ember/homepage/sections/kitchen-feature.jpg",
       label: "Kitchen Feature",
       aspectRatio: "4 / 5",
       alt: "Grilled steak sliced on a dark plate with herbs.",
@@ -175,6 +180,7 @@ export const homepageData = {
       href: "#cocktails",
     } satisfies Cta,
     image: {
+      src: "/images/low-ember/homepage/sections/cocktail-feature.jpg",
       label: "Cocktail Feature",
       aspectRatio: "4 / 5",
       alt: "Amber cocktail in a coupe glass on a dark bar.",
@@ -207,6 +213,7 @@ export const homepageData = {
     description:
       "Bright enough early, low-lit later, with banquettes, bar seats, and corners that make a long dinner feel easy.",
     image: {
+      src: "/images/low-ember/homepage/sections/room-interior.jpg",
       label: "Room Interior",
       aspectRatio: "16 / 7",
       alt: "Low-lit dining room with candles, banquettes, and bar seating.",
@@ -232,6 +239,7 @@ export const homepageData = {
       href: "#private-dining",
     } satisfies Cta,
     image: {
+      src: "/images/low-ember/homepage/sections/private-dining.jpg",
       label: "Private Dining",
       aspectRatio: "16 / 9",
       alt: "Private dining table set with wine glasses and candlelight.",
@@ -254,6 +262,7 @@ export const homepageData = {
           href: "#happenings",
         },
         image: {
+          src: "/images/low-ember/homepage/events/sunday-supper.jpg",
           label: "Sunday Supper",
           aspectRatio: "4 / 3",
           alt: "Shared dinner plates on a warm restaurant table.",
@@ -271,6 +280,7 @@ export const homepageData = {
           href: "#happenings",
         },
         image: {
+          src: "/images/low-ember/homepage/events/guest-bartender-night.jpg",
           label: "Guest Bartender Night",
           aspectRatio: "4 / 3",
           alt: "Bartender preparing a cocktail behind the bar.",
@@ -288,6 +298,7 @@ export const homepageData = {
           href: "#happenings",
         },
         image: {
+          src: "/images/low-ember/homepage/events/late-night-vinyl.jpg",
           label: "Late Night Vinyl",
           aspectRatio: "4 / 3",
           alt: "Vinyl record beside a late-night drink.",
@@ -314,6 +325,7 @@ export const homepageData = {
       href: siteConfig.reservation.href,
     },
     map: {
+      src: "/images/low-ember/homepage/location/location-map-dark.jpg",
       label: "Map Placeholder",
       aspectRatio: "16 / 9",
       alt: "Dark map showing the Low Ember location.",
