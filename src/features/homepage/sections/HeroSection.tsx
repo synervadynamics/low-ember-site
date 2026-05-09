@@ -34,7 +34,7 @@ export function HeroSection() {
                 style={{ objectPosition: "68% center" }}
               />
             ) : null}
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,color-mix(in_srgb,var(--color-bg)_99%,black)_0%,color-mix(in_srgb,var(--color-bg-soft)_97%,black)_20%,rgba(7,6,4,0.94)_34%,rgba(7,6,4,0.72)_48%,rgba(7,6,4,0.36)_62%,transparent_78%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,color-mix(in_srgb,var(--color-bg)_98%,black)_0%,color-mix(in_srgb,var(--color-bg-soft)_95%,black)_16%,rgba(7,6,4,0.82)_29%,rgba(7,6,4,0.54)_43%,rgba(7,6,4,0.2)_57%,transparent_73%)]" />
           </div>
           <div className="grid min-h-[32rem] gap-0 md:min-h-[35rem] lg:min-h-[36.5rem] lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] xl:min-h-[38rem]">
             <div className="relative z-10 flex flex-col px-5 py-7 sm:px-7 sm:py-8 lg:px-8 lg:py-7 xl:px-10 xl:py-8">

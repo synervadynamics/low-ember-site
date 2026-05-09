@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Container } from "@/components/ui/Container";
 import { FeatureIcon } from "@/components/ui/FeatureIcon";
 import { MediaFrame } from "@/components/ui/MediaFrame";
@@ -17,24 +19,45 @@ export function RoomSection() {
     >
       <Container>
         <div className="panel panel-border overflow-hidden">
-          <div className="grid gap-0 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)]">
-            <div className="flex flex-col gap-5 px-5 py-6 sm:px-6 sm:py-7 lg:px-7">
-              <SectionHeader
-                eyebrow={room.eyebrow}
-                title={room.title}
-                titleId="room-section-heading"
-                className="space-y-4"
-              />
-              <p className="max-w-lg text-sm leading-7 text-[var(--color-muted)] sm:text-base">
-                {room.description}
-              </p>
+          <div className="relative overflow-hidden lg:min-h-[24rem]">
+            <div
+              className="pointer-events-none absolute inset-0 z-[1] hidden overflow-hidden lg:block"
+              aria-hidden="true"
+            >
+              {room.image.src ? (
+                <Image
+                  src={room.image.src}
+                  alt=""
+                  fill
+                  sizes={room.image.sizes}
+                  className="object-cover"
+                  style={{ objectPosition: room.image.objectPosition }}
+                />
+              ) : null}
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,color-mix(in_srgb,var(--color-bg)_98%,black)_0%,color-mix(in_srgb,var(--color-bg-soft)_95%,black)_14%,rgba(7,6,4,0.8)_26%,rgba(7,6,4,0.5)_39%,rgba(7,6,4,0.18)_52%,transparent_68%)]" />
             </div>
 
-            <div className="border-t border-[color:var(--color-border)] lg:border-l lg:border-t-0">
-              <MediaFrame
-                image={room.image}
-                className="min-h-[20rem] rounded-none border-0 sm:min-h-[24rem] lg:min-h-full"
-              />
+            <div className="grid gap-0 lg:min-h-[24rem] lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)]">
+              <div className="relative z-10 flex flex-col gap-5 px-5 py-6 sm:px-6 sm:py-7 lg:px-7">
+                <SectionHeader
+                  eyebrow={room.eyebrow}
+                  title={room.title}
+                  titleId="room-section-heading"
+                  className="space-y-4"
+                />
+                <p className="max-w-lg text-sm leading-7 text-[var(--color-muted)] sm:text-base">
+                  {room.description}
+                </p>
+              </div>
+
+              <div className="hidden lg:block" aria-hidden="true" />
+
+              <div className="border-t border-[color:var(--color-border)] lg:hidden">
+                <MediaFrame
+                  image={room.image}
+                  className="min-h-[20rem] rounded-none border-0 sm:min-h-[24rem]"
+                />
+              </div>
             </div>
           </div>
 

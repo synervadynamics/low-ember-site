@@ -218,7 +218,7 @@ export const homepageData = {
       aspectRatio: "16 / 7",
       alt: "Low-lit dining room with candles, banquettes, and bar seating.",
       objectPosition: "center center",
-      sizes: "(min-width: 1024px) 60vw, 100vw",
+      sizes: "100vw",
       decorative: true,
     } satisfies MediaFrameImage,
     features: [
@@ -244,7 +244,7 @@ export const homepageData = {
       aspectRatio: "16 / 9",
       alt: "Private dining table set with wine glasses and candlelight.",
       objectPosition: "center center",
-      sizes: "(min-width: 1024px) 60vw, 100vw",
+      sizes: "100vw",
       decorative: true,
     } satisfies MediaFrameImage,
   },
