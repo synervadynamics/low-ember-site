@@ -9,6 +9,13 @@ export type SocialLink = {
   href: string;
 };
 
+export type FooterConfig = {
+  tagline: string;
+  navItems: NavItem[];
+  legalNavItems: NavItem[];
+  socialLinks: SocialLink[];
+};
+
 export const siteConfig = {
   name: "Low Ember",
   legalName: "Low Ember",
@@ -31,7 +38,7 @@ export const siteConfig = {
   },
   reservation: {
     label: "Reserve a Table",
-    href: "#reserve",
+    href: "#contact",
   },
   social: [
     {
@@ -60,7 +67,11 @@ export const footerNavItems: NavItem[] = [
   { label: "Contact", href: "#contact" },
 ];
 
-export const legalNavItems: NavItem[] = [
-  { label: "Privacy Policy", href: "#privacy" },
-  { label: "Terms of Service", href: "#terms" },
-];
+export const legalNavItems: NavItem[] = [];
+
+export const footerConfig: FooterConfig = {
+  tagline: "Seasonal plates. Good drinks. A room worth settling into.",
+  navItems: footerNavItems,
+  legalNavItems,
+  socialLinks: [...siteConfig.social],
+};

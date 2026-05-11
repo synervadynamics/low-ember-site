@@ -11,7 +11,11 @@ export type FeatureIconName =
   | "map"
   | "clock"
   | "heart"
-  | "briefcase";
+  | "briefcase"
+  | "dateNights"
+  | "workDinners"
+  | "lateTables"
+  | "regulars";
 
 type FeatureIconProps = {
   name: FeatureIconName | string;
@@ -101,6 +105,33 @@ export function FeatureIcon({ name, className }: FeatureIconProps) {
         <path d="M9 7V5h6v2" />
         <path d="M4 8h16v10H4z" />
         <path d="M4 12h16" />
+      </svg>
+    ),
+    dateNights: (
+      <svg viewBox="0 0 24 24" className={iconClassName} aria-hidden="true">
+        <path d="M12 20s-7-4.8-7-10a4 4 0 0 1 7-2.4A4 4 0 0 1 19 10c0 5.2-7 10-7 10Z" />
+      </svg>
+    ),
+    workDinners: (
+      <svg viewBox="0 0 24 24" className={iconClassName} aria-hidden="true">
+        <path d="M9 7V5h6v2" />
+        <path d="M4 8h16v10H4z" />
+        <path d="M4 12h16" />
+      </svg>
+    ),
+    lateTables: (
+      <svg viewBox="0 0 24 24" className={iconClassName} aria-hidden="true">
+        <path d="M4 5h16l-8 8-8-8Z" />
+        <path d="M12 13v6" />
+        <path d="M9 21h6" />
+      </svg>
+    ),
+    regulars: (
+      <svg viewBox="0 0 24 24" className={iconClassName} aria-hidden="true">
+        <path d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+        <path d="M17 12a2.5 2.5 0 1 0 0-5" />
+        <path d="M4 19a5 5 0 0 1 10 0" />
+        <path d="M15 19a4 4 0 0 1 5-3.5" />
       </svg>
     ),
   };

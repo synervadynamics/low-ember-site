@@ -6,8 +6,6 @@ import { MediaFrame } from "@/components/ui/MediaFrame";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { homepageData } from "@/features/homepage/homepage.data";
 
-const roomFeatureIcons = ["heart", "briefcase", "martini", "users"] as const;
-
 export function RoomSection() {
   const { room } = homepageData;
 
@@ -62,17 +60,17 @@ export function RoomSection() {
           </div>
 
           <div className="grid border-t border-[color:var(--color-border)] sm:grid-cols-2 xl:grid-cols-4">
-            {room.features.map((feature, index) => (
+            {room.features.map((feature) => (
               <div
-                key={feature}
+                key={feature.label}
                 className="flex min-h-14 items-center gap-3 border-b border-[color:var(--color-border)] px-4 py-3 last:border-b-0 sm:px-5 xl:border-b-0 xl:border-r last:xl:border-r-0"
               >
                 <FeatureIcon
-                  name={roomFeatureIcons[index] ?? "flame"}
+                  name={feature.icon}
                   className="h-8 w-8 shrink-0"
                 />
                 <span className="text-[10px] uppercase tracking-[0.16em] text-[var(--color-text-soft)] sm:text-[11px]">
-                  {feature}
+                  {feature.label}
                 </span>
               </div>
             ))}

@@ -1,9 +1,6 @@
 import type { MediaFrameImage } from "@/components/ui/MediaFrame";
-import {
-  footerNavItems,
-  legalNavItems,
-  siteConfig,
-} from "@/lib/site";
+import type { FeatureIconName } from "@/components/ui/FeatureIcon";
+import { siteConfig } from "@/lib/site";
 
 type Cta = {
   label: string;
@@ -21,6 +18,11 @@ type EventItem = {
   description: string;
   cta: Cta;
   image: MediaFrameImage;
+};
+
+type RoomFeature = {
+  label: string;
+  icon: FeatureIconName;
 };
 
 export const homepageData = {
@@ -123,8 +125,8 @@ export const homepageData = {
   },
   kitchen: {
     id: "menus",
-    eyebrow: "From the kitchen",
-    title: "From the kitchen",
+    eyebrow: "FROM THE KITCHEN",
+    title: "Familiar plates, done with care.",
     description:
       "The menu stays familiar on purpose: steak, fish, pasta, roast chicken, good vegetables, proper sauce, and clean seasoning.",
     secondaryDescription:
@@ -171,8 +173,8 @@ export const homepageData = {
   },
   bar: {
     id: "cocktails",
-    eyebrow: "The bar",
-    title: "The bar",
+    eyebrow: "THE BAR",
+    title: "Drinks that keep pace with dinner.",
     description:
       "The bar keeps pace with dinner service: cold martinis, fresh citrus, and a wine list that helps more than it performs.",
     cta: {
@@ -208,8 +210,8 @@ export const homepageData = {
   },
   room: {
     id: "about",
-    eyebrow: "The room",
-    title: "The room",
+    eyebrow: "THE ROOM",
+    title: "A place to stay awhile.",
     description:
       "Bright enough early, low-lit later, with banquettes, bar seats, and corners that make a long dinner feel easy.",
     image: {
@@ -222,20 +224,20 @@ export const homepageData = {
       decorative: true,
     } satisfies MediaFrameImage,
     features: [
-      "Date nights",
-      "Work dinners",
-      "Late tables",
-      "Regulars",
-    ],
+      { label: "Date nights", icon: "dateNights" },
+      { label: "Work dinners", icon: "workDinners" },
+      { label: "Late tables", icon: "lateTables" },
+      { label: "Regulars", icon: "regulars" },
+    ] satisfies RoomFeature[],
   },
   privateDining: {
     id: "private-dining",
-    eyebrow: "Private dining",
+    eyebrow: "PRIVATE DINING",
     title: "Private dinners, done properly.",
     description:
       "A separate room, flexible set menus, and the same service pace as the main floor.",
     cta: {
-      label: "Start an Inquiry",
+      label: "PLAN A DINNER",
       href: "#private-dining",
     } satisfies Cta,
     image: {
@@ -250,7 +252,7 @@ export const homepageData = {
   },
   happenings: {
     id: "happenings",
-    eyebrow: "What’s on",
+    eyebrow: "EVENTS",
     title: "What’s on",
     events: [
       {
@@ -326,19 +328,12 @@ export const homepageData = {
     },
     map: {
       src: "/images/low-ember/homepage/location/location-map-dark.jpg",
-      label: "Map Placeholder",
+      label: "Low Ember location map",
       aspectRatio: "16 / 9",
       alt: "Dark map showing the Low Ember location.",
       objectPosition: "center center",
       sizes: "(min-width: 1024px) 50vw, 100vw",
       decorative: true,
     } satisfies MediaFrameImage,
-  },
-  footer: {
-    tagline:
-      "Seasonal plates. Good drinks. A room worth settling into.",
-    navItems: footerNavItems,
-    legalNavItems,
-    socialLinks: siteConfig.social,
   },
 } as const;
