@@ -4,24 +4,45 @@
 @theme inline {
   --color-background: var(--color-bg);
   --color-foreground: var(--color-text);
+  --color-bg-deep: var(--color-bg-deep);
   --color-bg: var(--color-bg);
   --color-bg-soft: var(--color-bg-soft);
   --color-surface: var(--color-surface);
   --color-surface-soft: var(--color-surface-soft);
+  --color-surface-raised: var(--color-surface-raised);
+  --color-surface-panel: var(--color-surface-panel);
+  --color-surface-panel-soft: var(--color-surface-panel-soft);
+  --color-surface-band: var(--color-surface-band);
+  --color-surface-band-dense: var(--color-surface-band-dense);
+  --color-surface-footer: var(--color-surface-footer);
+  --color-surface-map: var(--color-surface-map);
   --color-surface-warm: var(--color-surface-warm);
+  --color-divider-faint: var(--color-divider-faint);
+  --color-divider: var(--color-divider);
+  --color-divider-strong: var(--color-divider-strong);
   --color-border: var(--color-border);
   --color-border-strong: var(--color-border-strong);
+  --color-image-frame-line: var(--color-image-frame-line);
   --color-text: var(--color-text);
   --color-text-soft: var(--color-text-soft);
   --color-muted: var(--color-muted);
   --color-muted-strong: var(--color-muted-strong);
+  --color-accent-brass: var(--color-accent-brass);
+  --color-accent-brass-soft: var(--color-accent-brass-soft);
+  --color-accent-ember: var(--color-accent-ember);
+  --color-accent-ember-hover: var(--color-accent-ember-hover);
   --color-brass: var(--color-brass);
   --color-brass-soft: var(--color-brass-soft);
   --color-ember: var(--color-ember);
   --color-ember-hover: var(--color-ember-hover);
   --color-rust: var(--color-rust);
+  --color-glow-warm: var(--color-glow-warm);
+  --color-glow-ember: var(--color-glow-ember);
+  --color-hero-overlay: var(--color-hero-overlay);
   --shadow-soft: var(--shadow-soft);
   --shadow-panel: var(--shadow-panel);
+  --shadow-soft-panel: var(--shadow-soft-panel);
+  --shadow-atmospheric: var(--shadow-atmospheric);
   --radius-sm: var(--radius-sm);
   --radius-md: var(--radius-md);
   --radius-lg: var(--radius-lg);
@@ -44,9 +65,9 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(166, 75, 43, 0.12), transparent 28%),
+    radial-gradient(circle at top, var(--color-glow-ember), transparent 28%),
     radial-gradient(circle at 20% 18%, rgba(197, 138, 69, 0.05), transparent 24%),
-    linear-gradient(180deg, #090705 0%, var(--color-bg) 34%, #050403 100%);
+    linear-gradient(180deg, #090705 0%, var(--color-bg) 34%, var(--color-bg-deep) 100%);
   color: var(--color-text);
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -90,24 +111,197 @@ select {
   padding-block: clamp(3.25rem, 6vw, 5.5rem);
 }
 
+@utility page-section-dense {
+  padding-block: clamp(2.5rem, 4.5vw, 4rem);
+}
+
+@utility section-band {
+  position: relative;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(197, 138, 69, 0.07), transparent 28%),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-surface-band) 96%, black) 0%,
+      color-mix(in srgb, var(--color-bg) 94%, black) 100%
+    );
+}
+
+@utility section-band-dense {
+  position: relative;
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-surface-band-dense) 98%, black) 0%,
+      color-mix(in srgb, var(--color-bg-deep) 96%, black) 100%
+    );
+}
+
+@utility footer-band {
+  position: relative;
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-surface-footer) 95%, black) 0%,
+      color-mix(in srgb, var(--color-bg-deep) 98%, black) 100%
+    );
+}
+
+@utility map-band {
+  position: relative;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(197, 138, 69, 0.06), transparent 24%),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-surface-map) 95%, black) 0%,
+      color-mix(in srgb, var(--color-bg-deep) 96%, black) 100%
+    );
+}
+
 @utility panel {
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--color-surface-soft) 86%, black) 0%,
-    color-mix(in srgb, var(--color-surface) 94%, black) 100%
+    color-mix(in srgb, var(--color-surface-panel-soft) 88%, black) 0%,
+    color-mix(in srgb, var(--color-surface-panel) 96%, black) 100%
   );
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.03),
-    var(--shadow-soft);
+    var(--shadow-soft-panel);
+  border-radius: var(--radius-lg);
+}
+
+@utility panel-soft {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-surface-soft) 92%, black) 0%,
+    color-mix(in srgb, var(--color-surface) 98%, black) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.025),
+    0 12px 34px rgba(0, 0, 0, 0.18);
+  border-radius: var(--radius-lg);
+}
+
+@utility panel-elevated {
+  background:
+    radial-gradient(circle at top, rgba(197, 138, 69, 0.06), transparent 28%),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-surface-raised) 92%, black) 0%,
+      color-mix(in srgb, var(--color-surface-panel) 96%, black) 100%
+    );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.035),
+    var(--shadow-atmospheric);
   border-radius: var(--radius-lg);
 }
 
 @utility panel-border {
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-divider);
+}
+
+@utility divider-faint {
+  border-color: var(--color-divider-faint);
+}
+
+@utility divider-strong {
+  border-color: var(--color-divider-strong);
+}
+
+@utility warm-radial-glow {
+  position: relative;
+  isolation: isolate;
+}
+
+@utility editorial-card {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-surface-panel-soft) 88%, black) 0%,
+      color-mix(in srgb, var(--color-surface-panel) 96%, black) 100%
+    );
+  border: 1px solid var(--color-divider);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    var(--shadow-soft-panel);
+  border-radius: var(--radius-lg);
+}
+
+@utility display-heading {
+  text-wrap: balance;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  color: var(--color-text-soft);
+}
+
+@utility body-measure {
+  max-width: 66ch;
+}
+
+@utility metadata-eyebrow {
+  font-size: clamp(0.625rem, 0.59rem + 0.16vw, 0.72rem);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+@utility frame-inset {
+  padding: 0.5rem;
+}
+
+@utility frame-bleed {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 @utility text-balance {
   text-wrap: balance;
+}
+
+.warm-radial-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 18% 18%, var(--color-glow-warm), transparent 24%),
+    radial-gradient(circle at 80% 0%, rgba(166, 75, 43, 0.1), transparent 20%);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.cinematic-image-band {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.28) 100%),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-surface-band) 94%, black) 0%,
+      color-mix(in srgb, var(--color-bg-deep) 96%, black) 100%
+    );
+}
+
+.low-ember-focus-ring:focus-visible {
+  outline: 2px solid var(--color-brass-soft);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--color-focus-ring);
+}
+
+.low-ember-transition {
+  transition-property: background-color, border-color, color, box-shadow, opacity, transform;
+  transition-duration: 220ms;
+  transition-timing-function: ease;
+}
+
+.low-ember-interactive {
+  transition-property: color, border-color, background-color, box-shadow, opacity, transform;
+  transition-duration: 220ms;
+  transition-timing-function: ease;
+}
+
+.low-ember-interactive:hover,
+.low-ember-interactive:focus-visible {
+  border-color: var(--color-divider-strong);
 }
 
 .low-ember-nav-link {
@@ -140,6 +334,12 @@ select {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .low-ember-transition,
+  .low-ember-interactive,
   .low-ember-nav-link::after {
     transition: none;
   }

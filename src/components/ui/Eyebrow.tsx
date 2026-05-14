@@ -4,14 +4,26 @@ import { cn } from "@/lib/utils";
 
 type EyebrowProps = {
   children: ReactNode;
+  tone?: "accent" | "muted" | "soft";
   className?: string;
 };
 
-export function Eyebrow({ children, className }: EyebrowProps) {
+const eyebrowTones = {
+  accent: "text-[var(--color-brass)]/88",
+  muted: "text-[var(--color-muted)]/88",
+  soft: "text-[var(--color-text-soft)]/72",
+} as const;
+
+export function Eyebrow({
+  children,
+  tone = "accent",
+  className,
+}: EyebrowProps) {
   return (
     <p
       className={cn(
-        "text-[10px] font-medium uppercase tracking-[0.24em] text-[var(--color-brass)]/88 sm:text-[11px]",
+        "metadata-eyebrow",
+        eyebrowTones[tone],
         className,
       )}
     >
