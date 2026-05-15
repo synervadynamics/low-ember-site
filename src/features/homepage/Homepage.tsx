@@ -1,5 +1,6 @@
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { Reveal } from "@/components/ui/Reveal";
 import { BarSection } from "@/features/homepage/sections/BarSection";
 import { DiningCardsSection } from "@/features/homepage/sections/DiningCardsSection";
 import { FeatureStrip } from "@/features/homepage/sections/FeatureStrip";
@@ -22,14 +23,30 @@ export function Homepage() {
       <SiteHeader />
       <main id="main-content" className="flex-1">
         <HeroSection />
-        <FeatureStrip />
-        <DiningCardsSection />
-        <KitchenSection />
-        <BarSection />
-        <RoomSection />
-        <PrivateDiningSection />
-        <HappeningsSection />
-        <LocationSection />
+        <Reveal>
+          <FeatureStrip />
+        </Reveal>
+        <Reveal>
+          <DiningCardsSection />
+        </Reveal>
+        <Reveal>
+          <KitchenSection />
+        </Reveal>
+        <Reveal>
+          <BarSection />
+        </Reveal>
+        <Reveal>
+          <RoomSection />
+        </Reveal>
+        <Reveal>
+          <PrivateDiningSection />
+        </Reveal>
+        <Reveal>
+          <HappeningsSection />
+        </Reveal>
+        <Reveal>
+          <LocationSection />
+        </Reveal>
       </main>
       <SiteFooter />
     </div>

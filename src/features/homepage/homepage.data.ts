@@ -128,9 +128,8 @@ export const homepageData = {
     eyebrow: "FROM THE KITCHEN",
     title: "Familiar plates, done with care.",
     description:
-      "The menu stays familiar on purpose: steak, fish, pasta, roast chicken, good vegetables, proper sauce, and clean seasoning.",
-    secondaryDescription:
-      "The menu changes with the season and the market. Buy well, cook carefully, and leave off anything that does not earn its place.",
+      "The menu stays familiar on purpose, with steak, fish, pasta, good vegetables, proper sauce, and clean seasoning. It moves with the season and the market, but the rule stays simple: buy well, cook carefully, and leave off anything that does not earn its place.",
+    secondaryDescription: "",
     cta: {
       label: "View Dinner Menu",
       href: "#menus",

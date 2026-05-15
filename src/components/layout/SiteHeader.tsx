@@ -42,7 +42,11 @@ export function SiteHeader() {
           </nav>
 
           <div className="ml-auto hidden lg:block">
-            <Button href={siteConfig.reservation.href} className="px-4">
+            <Button
+              href={siteConfig.reservation.href}
+              size="sm"
+              className="px-4"
+            >
               {siteConfig.reservation.label}
             </Button>
           </div>
@@ -50,6 +54,7 @@ export function SiteHeader() {
           <div className="ml-auto flex items-center gap-2 lg:hidden">
             <Button
               href={siteConfig.reservation.href}
+              size="sm"
               className="px-3 py-2 text-[9px] sm:px-4"
             >
               Reserve
