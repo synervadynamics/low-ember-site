@@ -67,6 +67,7 @@ export function RoomSection() {
               >
                 <FeatureIcon
                   name={feature.icon}
+                  size="md"
                   className="h-8 w-8 shrink-0"
                 />
                 <span className="text-[10px] uppercase tracking-[0.16em] text-[var(--color-text-soft)] sm:text-[11px]">

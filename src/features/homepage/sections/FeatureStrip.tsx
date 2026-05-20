@@ -27,7 +27,7 @@ export function FeatureStrip() {
                   .filter(Boolean)
                   .join(" ")}
               >
-                <FeatureIcon name={item.icon} className="mt-0.5 h-9 w-9 shrink-0" />
+                <FeatureIcon name={item.icon} size="lg" className="mt-0.5 h-9 w-9 shrink-0" />
                 <div className="min-w-0 space-y-1">
                   <h2 className="text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--color-text-soft)] sm:text-[11px]">
                     {item.title}

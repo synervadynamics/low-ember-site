@@ -57,22 +57,22 @@ export const homepageData = {
     {
       title: "Dinner service",
       description: "Nightly from 5pm",
-      icon: "utensils",
+      icon: "dinner",
     },
     {
       title: "Cocktails & wine",
       description: "Classics, house drinks, Niagara wine",
-      icon: "martini",
+      icon: "cocktails",
     },
     {
       title: "Private dining",
       description: "Birthdays, work dinners, buyouts",
-      icon: "users",
+      icon: "privateDining",
     },
     {
       title: "Walk-ins welcome",
       description: "Bar seats and high-tops nightly",
-      icon: "chair",
+      icon: "walkIns",
     },
   ],
   diningCards: {
@@ -128,7 +128,7 @@ export const homepageData = {
     eyebrow: "FROM THE KITCHEN",
     title: "Familiar plates, done with care.",
     description:
-      "The menu stays familiar on purpose, with steak, fish, pasta, good vegetables, proper sauce, and clean seasoning. It moves with the season and the market, but the rule stays simple: buy well, cook carefully, and leave off anything that does not earn its place.",
+      "Familiar plates, careful sourcing, proper sauce, and clean seasoning. The menu moves with the season, but the rule stays simple: buy well, cook carefully, and leave off anything that does not earn its place.",
     secondaryDescription: "",
     cta: {
       label: "View Dinner Menu",
